@@ -13,10 +13,10 @@ i {
   }
 }
 .loading div {
-  left:50%;
-  top: 4rem;
   position: absolute;
-  animation: loader ease-in-out 4s infinite;
+  left: 50%;
+  top: 8rem;
+  animation: loader ease-in-out 1s infinite;
   background: #9356dc;
   width: 2.5rem;
   height: 8rem;
@@ -54,37 +54,46 @@ i {
   background: #e379ff;
 }
 .loading div:nth-child(7) {
+  transform: none;
+  animation: loader ease-in-out 1.2s infinite;
+  color: #6ba194;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 4rem;
+  position: relative;
+  top: 17rem;
+  left: 48.5%;
+  background: #99e2d0;
+  width: 5rem;
+  height: 4.5rem;
+}
+.loading div:nth-child(8) {
   transform: rotate(180deg);
   animation-delay: -1s;
   background: #ff79fc;
 }
-.loading div:nth-child(8) {
+.loading div:nth-child(9) {
   transform: rotate(210deg);
   animation-delay: -0.8s;
   background: #ff79da;
 }
-.loading div:nth-child(9) {
+.loading div:nth-child(10) {
   transform: rotate(240deg);
   animation-delay: -0.7s;
   background: #9356dc;
 }
-.loading div:nth-child(10) {
+.loading div:nth-child(11) {
   transform: rotate(270deg);
   animation-delay: -0.4s;
   background: #a556dc;
 }
-.loading div:nth-child(11) {
+.loading div:nth-child(12) {
   transform: rotate(300deg);
   animation-delay: -0.25s;
   background: #a556dc;
 }
-.loading div:nth-child(12) {
+.loading div:nth-child(13) {
   transform: rotate(330deg);
   animation-delay: 0s;
   background: #ce56dc;
-}
-.loading-spinner {
-  width: 20rem;
-  height: 0rem;
-}
 }
