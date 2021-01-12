@@ -1,8 +1,40 @@
+:root {
+  --primaire: #9356dc;
+  --secondaire: #ff79da;
+  --tertiaire: #99e2d0;
+  --backgroundcolorsec: #f4f4f4;
+  --backgroundcolorprim: #f8f8f8;
+}
+* {
+  width: auto;
+  margin: 0;
+}
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1.5rem 3.5rem 0.2rem 3.5rem;
+}
+p {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.2rem 2rem;
+}
+body {
+  background-color: var(--backgroundcolorprim);
+}
+/*header*/
+#logo {
+  width: 70%;
+}
+header p {
+  text-align: center;
+}
+/*loading spinner*/
 i {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #99e2d0;
-  padding-top: 2.5rem;
-  padding-left: 0.4rem;
+  padding-top: 1rem;
+  padding-left: 0.3rem;
 }
 @keyframes loader {
   0% {
@@ -14,14 +46,14 @@ i {
 }
 .loading div {
   position: absolute;
-  left: 50%;
+  left: 52%;
   top: 8rem;
-  animation: loader ease-in-out 1s infinite;
+  animation: loader ease-in-out 1s 4;
   background: #9356dc;
-  width: 2.5rem;
-  height: 8rem;
+  width: 1.5rem;
+  height: 3.5rem;
   border-radius: 1rem;
-  transform-origin: 1rem 12rem;
+  transform-origin: 1rem 5.5rem;
 }
 .loading div:nth-child(1) {
   transform: rotate(0deg);
@@ -54,18 +86,16 @@ i {
   background: #e379ff;
 }
 .loading div:nth-child(7) {
-  transform: none;
-  animation: loader ease-in-out 1.2s infinite;
+  animation: loader ease-in-out 3.2s 1;
   color: #6ba194;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
-  line-height: 4rem;
-  position: relative;
-  top: 17rem;
-  left: 48.5%;
+
   background: #99e2d0;
-  width: 5rem;
-  height: 4.5rem;
+  width: 3rem;
+  height: auto;
+  padding: 0.5rem 0;
+  margin: 4.1rem 0 0 -0.5rem;
 }
 .loading div:nth-child(8) {
   transform: rotate(180deg);
@@ -96,4 +126,107 @@ i {
   transform: rotate(330deg);
   animation-delay: 0s;
   background: #ce56dc;
+}
+@keyframes invisible {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading-invisible {
+  animation: invisible 1.5s linear forwards;
+  animation-delay: 4s;
+}
+/*ACCUEIL*/
+/*recherche*/
+.accueil {
+  background-color: var(--backgroundcolorsec);
+  padding-bottom: 1rem;
+  border-top: 5px outset #cccccc;
+ 
+}
+.recherche {
+  display: flex;
+ 
+}
+input{
+ 
+  flex: 1;
+  border: none;
+  background-color: #dcdcdc;
+  font-size: 1.3rem;
+   padding-left: 2rem;
+}
+
+.recherche-icone {
+  background-color: #dcdcdc;
+  padding-left: 5rem;
+}
+.recherche i {
+  font-size: 1.5rem;
+  padding: 0.3rem 0.5rem 0.5rem 0.5rem;
+  color: #808080;
+}
+.recherche :hover {
+  background-color: #cccccc;
+}
+/*explorer*/
+.bouton-explorez {
+  color: white;
+  padding: 1rem 2.2rem;
+  border: none;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondaire),
+    var(--primaire)
+  );
+  border-radius: 1rem;
+}
+.bouton-explorez:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--primaire),
+    var(--secondaire)
+  );
+}
+/**/
+/*média tablette et desktop*/
+
+@media (min-width: 768px) {
+  /*spinner*/
+  .loading div {
+    position: absolute;
+    left: 50%;
+    top: 12rem;
+    animation: loader ease-in-out 1s 4;
+    background: #9356dc;
+    width: 1.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    transform-origin: 1rem 5.5rem;
+  }
+  .loading div:nth-child(7) {
+    animation: loader ease-in-out 3.2s 1;
+    color: #6ba194;
+    font-size: 1.5rem;
+    text-align: center;
+
+    background: #99e2d0;
+    width: 3rem;
+    height: auto;
+    padding: 0.5rem 0;
+    margin: 4.2rem 0 0 -0.5rem;
+  }
+
+  /*header*/
+  #logo {
+    width: 28%;
+  }
+  /*main accueil*/
+  .accueil {
+    width: 75%;
+    margin: auto;
+  }
+  .recherche i{
+ padding-left: 8rem;
 }
