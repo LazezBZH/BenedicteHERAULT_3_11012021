@@ -1,13 +1,15 @@
 :root {
-  --primaire: #9356dc;
+  --primaire: rgb(147, 86, 220);
   --secondaire: #ff79da;
   --tertiaire: #99e2d0;
-  --backgroundcolorsec: #f4f4f4;
+  --primairetransp: rgba(147, 86, 220, 0.1);
+  --secondairetransp: rgba(255, 121, 218, 0.1);
   --backgroundcolorprim: #f8f8f8;
+  --backgroundcolorsec: #f4f4f4;
 }
 * {
   width: auto;
-  margin: 0;
+
   font-family: "Roboto", sans-serif;
   list-style-type: none;
 }
@@ -28,10 +30,11 @@ h1 {
   text-align: center;
   padding: 1.5rem 3.5rem 0.2rem 3.5rem;
 }
+
 p {
   font-size: 1.1rem;
   text-align: center;
-  padding: 0.2rem 2rem;
+  padding: 0.2rem 1rem;
 }
 body {
   background-color: var(--backgroundcolorprim);
@@ -74,6 +77,7 @@ footer ul {
 /*loading spinner*/
 .loading-invisible {
   /*recouvre la page avant de disparaitre*/
+  display: none; /* A ENLEVER!!!!!!!!!!!!!!!*/
   position: absolute;
   z-index: 300;
   left: 0;
@@ -242,7 +246,61 @@ input {
     var(--secondaire)
   );
 }
+/*FONCTIONNEMENT*/
+.aide {
+  padding-top: 1rem;
+}
+.aide ul {
+  margin-right: 1rem;
+}
+.aide li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+  background-color: var(--backgroundcolorsec);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 5px rgb(184, 183, 183);
+}
+.aide li:hover {
+  background-color: var(--primairetransp);
+}
+.aide li:hover i {
+  color: var(--primaire);
+  font-size: 1.25rem;
+}
+.aide-num {
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: var(--primaire);
+  border-radius: 1.7rem;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  line-height: 1.7rem;
+  position: relative;
+  left: -2rem;
+}
 
+.aide-texte {
+  display: flex;
+  flex-direction: row;
+}
+.aide i {
+  color: grey;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.aide-txt {
+  font-size: 1.1rem;
+  position: absolute;
+  left: 7.2rem;
+}
 /*média tablette et desktop*/
 /*/*ECRANS ORDI/*/
 @media screen and (min-width: 1021px) {
@@ -287,6 +345,23 @@ input {
   .recherche i {
     padding-left: 8rem;
   }
+  /*FONCTIONNEMENT*/
+  .aide {
+  }
+  .aide li {
+    width: 30%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .aide i {
+    position: absolute;
+    left: 5rem;
+  }
+  .aide-txt {
+    position: absolute;
+    left: 8rem;
+  }
 }
 /*/*ECRANS MOYENS/*/
 @media screen and (min-width: 767px) and (max-width: 1020px) {
@@ -330,5 +405,34 @@ input {
   }
   .recherche i {
     padding-left: 8rem;
+  }
+  /*FONCTIONNEMENT*/
+  .aide {
+    width: 100%;
+  }
+  .aide h2 {
+    text-align: center;
+  }
+  .aide ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .aide li {
+    width: 40%;
+  }
+  .aide i {
+    position: relative;
+    left: -2.5rem;
+  }
+  .aide-txt {
+    position: relative;
+    left: -1rem;
+  }
+}
+/*/*ECRANS TRES PETITS/*/
+@media screen and (max-width: 340px) {
+  .aide-txt {
+    font-size: 1.3rem;
   }
 }
