@@ -8,14 +8,19 @@
 * {
   width: auto;
   margin: 0;
-  font-family: "Roboto", sans-serif ;
+  font-family: "Roboto", sans-serif;
+  list-style-type: none;
 }
-.container{
+a {
+  color: white;
+  text-decoration: none;
+}
+.container {
   max-width: 1440px;
-  margin:auto;
+  margin: auto;
   overflow: hidden;
 }
-.secondepolice{
+.secondepolice {
   font-family: "Shrikhand", sans-serif;
 }
 h1 {
@@ -39,28 +44,43 @@ header p {
   text-align: center;
 }
 /*footer*/
-footer{
+footer {
   background-color: black;
-  padding-left: 0%;
+  padding: 0;
+  color: white;
 }
-footer p{
+footer i {
+  color: white;
+  padding: 0;
+}
+footer #iconeréduite i {
+  font-size: 0.7rem;
+}
+footer p {
   text-align: left;
+  padding: 1.5rem 1rem 0rem 1rem;
 }
-  #logo_small{
-    width: 30%;
-    filter: invert(100%); 
-  -webkit-filter:invert(100%);
-  }
-
+#logo_small {
+  width: 30%;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+footer li {
+  padding: 0.3rem 1rem;
+}
+footer ul {
+  padding: 1rem 0.3rem;
+}
 /*loading spinner*/
-.loading-invisible { /*recouvre la page avant de disparaitre*/
-    position:absolute;
-    z-index:300;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    background-color:white;
+.loading-invisible {
+  /*recouvre la page avant de disparaitre*/
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
 }
 i {
   font-size: 1rem;
@@ -174,24 +194,21 @@ i {
 .accueil {
   background-color: var(--backgroundcolorsec);
   padding-bottom: 1rem;
-  border-top: .2rem outset #d3d3d3;
- 
+  border-top: 0.2rem outset #d3d3d3;
 }
-.accueil p{
-  color:#cccccc;
+.accueil p {
+  color: #cccccc;
 }
 .recherche {
   display: flex;
- 
 }
-input{
- 
+input {
   flex: 1;
-  color:#808080;
+  color: #808080;
   border: none;
   background-color: #dcdcdc;
   font-size: 1.3rem;
-   padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .recherche-icone {
@@ -225,10 +242,10 @@ input{
     var(--secondaire)
   );
 }
-/**/
+
 /*média tablette et desktop*/
-
-@media screen and (min-width: 1021px){
+/*/*ECRANS ORDI/*/
+@media screen and (min-width: 1021px) {
   /*spinner*/
   .loading div {
     position: absolute;
@@ -259,20 +276,20 @@ input{
     width: 28%;
   }
   /*footer*/
-   #logo_small{
+  #logo_small {
     width: 10%;
-   }
+  }
   /*main accueil*/
   .accueil {
     width: 75%;
     margin: auto;
   }
-  .recherche i{
- padding-left: 8rem;
+  .recherche i {
+    padding-left: 8rem;
+  }
 }
-
-
-@media screen and (min-width: 767px) and (max-width:1020px){
+/*/*ECRANS MOYENS/*/
+@media screen and (min-width: 767px) and (max-width: 1020px) {
   /*spinner*/
   .loading div {
     position: absolute;
@@ -303,15 +320,15 @@ input{
     width: 28%;
   }
   /*footer*/
-   #logo_small{
+  #logo_small {
     width: 10%;
-   }
+  }
   /*main accueil*/
   .accueil {
     width: 75%;
     margin: auto;
   }
-  .recherche i{
- padding-left: 8rem;
-}
+  .recherche i {
+    padding-left: 8rem;
+  }
 }
