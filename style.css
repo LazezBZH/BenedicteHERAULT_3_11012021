@@ -8,6 +8,15 @@
 * {
   width: auto;
   margin: 0;
+  font-family: "Roboto", sans-serif ;
+}
+.container{
+  max-width: 1440px;
+  margin:auto;
+  overflow: hidden;
+}
+.secondepolice{
+  font-family: "Shrikhand", sans-serif;
 }
 h1 {
   font-size: 1.5rem;
@@ -29,7 +38,30 @@ body {
 header p {
   text-align: center;
 }
+/*footer*/
+footer{
+  background-color: black;
+  padding-left: 0%;
+}
+footer p{
+  text-align: left;
+}
+  #logo_small{
+    width: 30%;
+    filter: invert(100%); 
+  -webkit-filter:invert(100%);
+  }
+
 /*loading spinner*/
+.loading-invisible { /*recouvre la page avant de disparaitre*/
+    position:absolute;
+    z-index:300;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color:white;
+}
 i {
   font-size: 1rem;
   color: #99e2d0;
@@ -142,8 +174,11 @@ i {
 .accueil {
   background-color: var(--backgroundcolorsec);
   padding-bottom: 1rem;
-  border-top: 5px outset #cccccc;
+  border-top: .2rem outset #d3d3d3;
  
+}
+.accueil p{
+  color:#cccccc;
 }
 .recherche {
   display: flex;
@@ -152,6 +187,7 @@ i {
 input{
  
   flex: 1;
+  color:#808080;
   border: none;
   background-color: #dcdcdc;
   font-size: 1.3rem;
@@ -192,7 +228,7 @@ input{
 /**/
 /*média tablette et desktop*/
 
-@media (min-width: 768px) {
+@media screen and (min-width: 1021px){
   /*spinner*/
   .loading div {
     position: absolute;
@@ -222,6 +258,10 @@ input{
   #logo {
     width: 28%;
   }
+  /*footer*/
+   #logo_small{
+    width: 10%;
+   }
   /*main accueil*/
   .accueil {
     width: 75%;
@@ -229,4 +269,49 @@ input{
   }
   .recherche i{
  padding-left: 8rem;
+}
+
+
+@media screen and (min-width: 767px) and (max-width:1020px){
+  /*spinner*/
+  .loading div {
+    position: absolute;
+    left: 50%;
+    top: 12rem;
+    animation: loader ease-in-out 1s 4;
+    background: #9356dc;
+    width: 1.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    transform-origin: 1rem 5.5rem;
+  }
+  .loading div:nth-child(7) {
+    animation: loader ease-in-out 3.2s 1;
+    color: #6ba194;
+    font-size: 1.5rem;
+    text-align: center;
+
+    background: #99e2d0;
+    width: 3rem;
+    height: auto;
+    padding: 0.5rem 0;
+    margin: 4.2rem 0 0 -0.5rem;
+  }
+
+  /*header*/
+  #logo {
+    width: 28%;
+  }
+  /*footer*/
+   #logo_small{
+    width: 10%;
+   }
+  /*main accueil*/
+  .accueil {
+    width: 75%;
+    margin: auto;
+  }
+  .recherche i{
+ padding-left: 8rem;
+}
 }

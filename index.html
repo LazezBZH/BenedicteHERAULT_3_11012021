@@ -23,12 +23,11 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
-    <header>
-      <p><img src="images/ohmyfood.png" alt="logo oh my food" id="logo" /></p>
-    </header>
-    <main>
+    <div class="container">
       <section class="loading-invisible">
+        <!--spinner au chargement, prend toute la page, durée qq secondes-->
         <div>
           <div class="loading">
             <div><i class="fas fa-utensils"></i></div>
@@ -47,53 +46,81 @@
           </div>
         </div>
       </section>
-      <section class="accueil">
-        <div class="recherche">
-          <span class="recherche-icone"
-            ><i class="fas fa-map-marker-alt"></i
-          ></span>
-          <input
-            type="search"
-            class="recherche-champ"
-            placeholder="Paris, Belleville"
-          />
-        </div>
 
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception séléctionnés par nos soins.</p>
+      <header>
+        <p><img src="images/ohmyfood.png" alt="logo oh my food" id="logo" /></p>
+      </header>
+      <main>
+        <section class="accueil">
+          <!--BARRE DE RECHERCHE, TITRE ET DESCRIPTION? BOUTON EXPLORER-->
+          <div class="recherche">
+            <!--barre de recherche-->
+            <span class="recherche-icone"
+              ><i class="fas fa-map-marker-alt"></i
+            ></span>
+            <input
+              type="search"
+              class="recherche-champ"
+              placeholder="Paris, Belleville"
+            />
+          </div>
+          <!--titre et description-->
+          <h1>Réservez le menu qui vous convient</h1>
+          <p>
+            Découvrez des restaurants d'exception séléctionnés par nos soins.
+          </p>
+          <!--bouton explorer-->
+          <p>
+            <a href="#restaurants"
+              ><button type="button" class="bouton-explorez">
+                Explorez nos restaurants
+              </button></a
+            >
+          </p>
+        </section>
+        <!--AIDE A L'UTILISATION DU SITE-->
+        <section class="aide">
+          <h2>Fonctionnement</h2>
+          <div class="choisir"></div>
+          <div class="composer"></div>
+          <div class="manger"></div>
+        </section>
+        <section class="liens">
+          <!--LIENS (figures/figcaption) VERS LES PAGES DES RESTAURANTS-->
+          <h2></h2>
+          <figure class="">
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </section>
+      </main>
+      <footer>
         <p>
-          <a href="#restaurants"
-            ><button type="button" class="bouton-explorez">
-              Explorez nos restaurants
-            </button></a
-          >
+          <img
+            src="images/ohmyfood.png"
+            alt="logo oh my food"
+            id="logo_small"
+          />
         </p>
-      </section>
-      <section class="aide">
-        <h2></h2>
-        <div class="choisir"></div>
-        <div class="composer"></div>
-        <div class="manger"></div>
-      </section>
-      <section class="liens">
-        <h2></h2>
-        <figure class="">
-          <img src="" alt="" />
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <img src="" alt="" />
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <img src="" alt="" />
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <img src="" alt="" />
-          <figcaption></figcaption>
-        </figure>
-      </section>
-    </main>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </footer>
+    </div>
   </body>
 </html>
