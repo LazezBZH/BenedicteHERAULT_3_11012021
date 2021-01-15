@@ -280,7 +280,6 @@ input {
 }
 
 .aide-txt {
-  color: red;
   font-size: 1.2rem;
 
   padding-left: 2rem;
@@ -288,19 +287,26 @@ input {
   line-height: 1rem;
 }
 /*RESTAURANTS (liens vers)*/
+h3 {
+  font-size: 1rem;
+  padding: 0 0 0 0.5rem;
+}
 
 .liens img {
   width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 figure {
   width: 100%;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
 
   display: flex;
   flex-direction: column;
 }
+
 figure p {
-  padding: 0;
+  padding: 0 0 0 0.5rem;
+  font-size: 1rem;
   text-align: left;
 }
 .liens ul {
@@ -309,6 +315,28 @@ figure p {
 }
 .liens li {
   padding: 1rem;
+}
+
+.caption i {
+  text-align: right;
+  font-size: 2.2rem;
+  color: grey;
+  align-items: right;
+  padding: 0.5rem 0 0 0;
+  position: absolute;
+  right: 2.5rem;
+}
+#caption-min {
+  padding-left: 2rem;
+}
+figcaption {
+  width: auto;
+  display: flex;
+  flex: 3 1;
+  align-content: space-between;
+  line-height: 0.5rem;
+  background-color: white;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 /*footer*/
@@ -387,10 +415,23 @@ footer ul {
     font-size: 1.1rem;
   }
   /*FONCTIONNEMENT*/
-
+  .aide {
+    width: auto;
+    padding: 0;
+  }
+  .aide h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 13rem 0 5rem 0;
+  }
+  .liens h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0 0 0;
+  }
   .aide li {
-    max-width: 25%;
-
+    width: auto;
+    height: 8rem;
     margin: 4rem 0;
     padding: 0;
   }
@@ -398,20 +439,19 @@ footer ul {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0rem 0 1rem 0;
+    padding: 0;
   }
   .aide i {
     font-size: 3rem;
     position: relative;
-    top: -3rem;
-    left: -0.5rem;
+    top: -6rem;
+    left: -5.5rem;
     line-height: inherit;
   }
   .aide-txt {
-    font-size: 2rem;
-    line-height: inherit;
+    font-size: 1.5rem;
     position: relative;
-    top: -2rem;
+    bottom: 5rem;
   }
   .aide-num {
     font-size: 5rem;
@@ -425,23 +465,35 @@ footer ul {
     margin: 0;
   }
   /*RESTAURANTS (liens vers)*/
+  .liens {
+    width: 70%;
+  }
 
-  figure {
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-  }
-  figure p {
-    padding: 0;
-    text-align: left;
-  }
   .liens ul {
+    width: 99%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
   }
   .liens li {
-    width: 30%;
+    width: 45%;
+  }
+  .liens figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .caption i {
+    position: relative;
+    left: 7rem;
+  }
+
+  /*REGROUPER RESTO ET FONCTIONNEMENT*/
+  .principal {
+    display: flex;
+    flex-direction: row;
+  }
+  .principal h2 {
   }
 }
 /*/*ECRANS MOYENS/*/
@@ -509,5 +561,26 @@ footer ul {
     position: relative;
     top: -0.5rem;
     left: -0.5rem;
+  }
+  /*RESTAURANTS (liens vers)*/
+  .liens h2 {
+    text-align: center;
+  }
+  .liens ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .liens li {
+    width: 45%;
+  }
+  .liens figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .caption i {
+    position: relative;
+    left: 7rem;
   }
 }
