@@ -1,0 +1,39 @@
+:root {
+  --primaire: rgb(147, 86, 220);
+  --secondaire: #ff79da;
+  --tertiaire: #99e2d0;
+  --primairetransp: rgba(147, 86, 220, 0.1);
+  --secondairetransp: rgba(255, 121, 218, 0.1);
+  --tertiairedark: #486d64;
+  --backgroundcolorprim: #f8f8f8;
+  --backgroundcolorsec: #f4f4f4;
+}
+
+.container-fiche {
+  background-color: var(--backgroundcolorprim);
+}
+.fiche-resto h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.fiche-resto img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.fiche-titre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fiche-resto figure {
+  position: relative;
+}
+.fiche-resto figcaption {
+  position: absolute;
+  bottom: 0rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: var(--backgroundcolorsec);
+}
