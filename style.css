@@ -1,6 +1,6 @@
 :root {
   --primaire: rgb(147, 86, 220);
-  --secondaire: #ff79da;
+  --secondaire: rgb(255, 121, 218);
   --tertiaire: #99e2d0;
   --primairetransp: rgba(147, 86, 220, 0.1);
   --secondairetransp: rgba(255, 121, 218, 0.1);
@@ -39,6 +39,7 @@ p {
   padding: 0.2rem 1rem;
 }
 body {
+  margin: 0;
   background-color: var(--backgroundcolorprim);
 }
 /*header*/
@@ -242,12 +243,14 @@ input {
 .bouton-explorez:hover {
   background-image: linear-gradient(
     to bottom right,
-    var(--primaire),
-    var(--secondaire)
+    rgba(255, 121, 218, 0.8),
+    rgba(147, 86, 220, 0.8)
   );
+  box-shadow: 10px 10px 10px rgb(170, 170, 170);
 }
 /*FONCTIONNEMENT*/
 .aide {
+  margin: 0 0.5rem;
   padding-top: 1rem;
 }
 .aide ul {
@@ -301,6 +304,9 @@ input {
   line-height: 1rem;
 }
 /*RESTAURANTS (liens vers)*/
+.liens h2 {
+  padding-left: 0.5rem;
+}
 .liens a {
   color: black;
 }
@@ -367,11 +373,51 @@ figcaption {
 }
 
 /*remplissage coeur*/
-.far {
-  opacity: 1;
+
+figcaption i {
+  -webkit-text-stroke: 2px grey;
+  -webkit-text-fill-color: rgb(147, 86, 220, 0);
 }
-.far:hover {
-  visibility: hidden;
+figcaption i:hover {
+  -webkit-animation: coeur 1s infinite 0ms alternate;
+  animation: coeur 500ms ease 0ms forwards;
+}
+@keyframes coeur {
+  from {
+    -webkit-text-stroke: 2px grey;
+  }
+  .1% {
+    -webkit-background-clip: text;
+    background-color: rgba(255, 121, 218, 0.1);
+
+    -webkit-text-stroke: 1px grey;
+  }
+  .2% {
+    -webkit-background-clip: text;
+    background-color: rgba(255, 121, 218, 0.3);
+
+    -webkit-text-stroke: 0px grey;
+  }
+  .3% {
+    -webkit-background-clip: text;
+    background-color: rgba(255, 121, 218, 0.5);
+
+    -webkit-text-stroke: 0px grey;
+  }
+  50% {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom, var(--primaire), white);
+    -webkit-text-stroke: 0px grey;
+  }
+  to {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      to bottom,
+      var(--primaire),
+      var(--secondaire)
+    );
+    -webkit-text-stroke: 0px grey;
+  }
 }
 
 /*footer*/
@@ -455,6 +501,7 @@ footer ul {
   .aide {
     width: 25%;
     padding: 0;
+    margin: 0;
   }
   .aide h2 {
     font-size: 1.5rem;
@@ -574,6 +621,9 @@ footer ul {
     font-size: 1.3rem;
   }
   /*FONCTIONNEMENT*/
+  .aide {
+    margin: 0;
+  }
   .aide li {
     max-width: 25%;
   }
