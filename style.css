@@ -179,8 +179,8 @@ i {
   }
 }
 .loading-invisible {
-  animation: invisible 1.5s linear forwards;
-  animation-delay: 4s;
+  animation: invisible 500ms linear forwards;
+  animation-delay: 2500ms;
 }
 /*ACCUEIL*/
 /*recherche*/
@@ -226,7 +226,7 @@ input {
   background-color: #cccccc;
 }
 /*explorer*/
-.bouton-explorez {
+.bouton {
   color: white;
   font-size: 1.2rem;
   padding: 1rem 1.2rem;
@@ -240,7 +240,7 @@ input {
   border-radius: 2rem;
   box-shadow: 5px 5px 5px rgb(184, 183, 183);
 }
-.bouton-explorez:hover {
+.bouton:hover {
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 121, 218, 0.8),
@@ -379,7 +379,7 @@ figcaption i {
   -webkit-text-fill-color: rgb(147, 86, 220, 0);
 }
 figcaption i:hover {
-  -webkit-animation: coeur 1s infinite 0ms alternate;
+  -webkit-animation: coeur 500ms infinite 0ms forwards;
   animation: coeur 500ms ease 0ms forwards;
 }
 @keyframes coeur {
@@ -425,8 +425,6 @@ footer {
   background-color: black;
   padding: 0;
   color: white;
-  position: relative;
-  bottom: 0;
 }
 footer i {
   color: white;
@@ -437,7 +435,7 @@ footer #iconeréduite i {
 }
 footer p {
   text-align: left;
-  padding: 1.5rem 1rem 0rem 1rem;
+  padding: 1rem 1rem 0rem 1rem;
 }
 #logo_small {
   width: 30%;
@@ -448,7 +446,7 @@ footer li {
   padding: 0.3rem 1rem;
 }
 footer ul {
-  padding: 1rem 0.3rem;
+  padding: 0rem 0.3rem 2rem 0;
 }
 /*média tablette et desktop*/
 /*/*ECRANS ORDI/*/
@@ -494,7 +492,7 @@ footer ul {
   .recherche i {
     padding-left: 8rem;
   }
-  .bouton-explorez {
+  .bouton {
     font-size: 1.1rem;
   }
   /*FONCTIONNEMENT*/
@@ -606,9 +604,7 @@ footer ul {
     width: 28%;
   }
   /*footer*/
-  #logo_small {
-    width: 10%;
-  }
+
   /*main accueil*/
   .accueil {
     width: 75%;
@@ -617,7 +613,7 @@ footer ul {
   .recherche i {
     padding-left: 8rem;
   }
-  .bouton-explorez {
+  .bouton {
     font-size: 1.3rem;
   }
   /*FONCTIONNEMENT*/
