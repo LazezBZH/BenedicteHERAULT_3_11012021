@@ -450,16 +450,7 @@ footer ul {
   padding: 0rem 0.3rem 2rem 0;
 }
 /*fiches restaurants*/
-:root {
-  --primaire: rgb(147, 86, 220);
-  --secondaire: #ff79da;
-  --tertiaire: #99e2d0;
-  --primairetransp: rgba(147, 86, 220, 0.1);
-  --secondairetransp: rgba(255, 121, 218, 0.1);
-  --tertiairedark: #486d64;
-  --backgroundcolorprim: #f8f8f8;
-  --backgroundcolorsec: #f4f4f4;
-}
+/*fiches restaurants*/
 
 .container-fiche {
   background-color: var(--backgroundcolorprim);
@@ -478,8 +469,8 @@ footer ul {
 }
 h4 {
   font-size: 1.2rem;
-  font-weight: 500;
-  padding: 1rem 0 0 1rem;
+  font-weight: 400;
+  padding: 1rem 0 0 0.5rem;
   margin: 0;
 }
 
@@ -498,79 +489,78 @@ h4 {
   position: relative;
 }
 .fiche-resto figcaption {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   bottom: 0;
+  padding-top: 1rem;
   border-radius: 2rem 2rem 0 0;
   box-shadow: none;
   background-color: var(--backgroundcolorsec);
+}
+.fiche-resto figcaption h3 {
+  font-size: 1.8rem;
+  font-weight: 590;
+}
+.fiche-resto figcaption i {
+  font-size: 1.5rem;
+  padding-right: 1rem;
 }
 .trait {
   width: 3rem;
   height: 0.25rem;
   background-color: var(--tertiaire);
   padding: 0;
-  margin: 0.4rem 0 0 1rem;
-}
-.fiche-details,
-.fiche-categorie {
-  background-color: var(--backgroundcolorsec);
-  margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 500px;
+  margin: 0.4rem 0 0 0.5rem;
 }
 
-.fiche-categorie_entrees {
+.fiche-detail__entrees :nth-child(1) {
   opacity: 0;
   animation: apparition 1000ms 200ms forwards;
 }
-.fiche-details_entrees :nth-child(1) {
+.fiche-details__entrees :nth-child(2) {
   opacity: 0;
   animation: apparition 1s 400ms forwards;
 }
-.fiche-details_entrees :nth-child(2) {
+.fiche-details__entrees :nth-child(3) {
   opacity: 0;
   animation: apparition 1s 600ms forwards;
 }
-.fiche-details_entrees :nth-child(3) {
+.fiche-details__entrees :nth-child(4) {
   opacity: 0;
   animation: apparition 1s 800ms forwards;
 }
-.fiche-details_entrees :nth-child(4) {
+.fiche-details__entrees :nth-child(5) {
   opacity: 0;
   animation: apparition 1s 900ms forwards;
 }
-.fiche-categorie_plats {
+.fiche-details__plats :nth-child(1) {
   opacity: 0;
   animation: apparition 1s 1000ms forwards;
 }
-.fiche-details_plats :nth-child(1) {
+.fiche-details__plats :nth-child(2) {
   opacity: 0;
   animation: apparition 1s 1200ms forwards;
 }
-.fiche-details_plats :nth-child(2) {
+.fiche-details__plats :nth-child(3) {
   opacity: 0;
   animation: apparition 1s 1400ms forwards;
 }
-.fiche-details_plats :nth-child(3) {
+.fiche-details__plats :nth-child(4) {
   opacity: 0;
   animation: apparition 1s 1600ms forwards;
 }
-.fiche-categorie_desserts {
+.fiche-details__desserts :nth-child(1) {
   opacity: 0;
   animation: apparition 1s 1800ms forwards;
 }
-.fiche-details_desserts :nth-child(1) {
+.fiche-details__desserts :nth-child(2) {
   opacity: 0;
   animation: apparition 1s 2000ms forwards;
 }
-.fiche-details_desserts :nth-child(2) {
+.fiche-details__desserts :nth-child(3) {
   opacity: 0;
   animation: apparition 1s 2200ms forwards;
 }
-.fiche-details_desserts :nth-child(3) {
+.fiche-details__desserts :nth-child(4) {
   opacity: 0;
   animation: apparition 1s 2400ms forwards;
 }
@@ -589,125 +579,102 @@ h4 {
   }
 }
 /*animation coche sélection plat*/
-.plat {
-  position: relative;
+/****************************/
+.fiche-details {
+  background-color: var(--backgroundcolorsec);
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
+  word-wrap: break-all;
+  text-overflow: ellipsis;
   white-space: nowrap;
- 
-  margin: 1rem auto;
+}
+.plat {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 0.5rem 0;
   background-color: white;
-  padding: 0;
   border-radius: 1rem;
   box-shadow: 2px 4px 10px rgb(173, 173, 173);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  overflow: hidden;
+  word-wrap: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.plat-selection {
-  position: absolute;
-  right: -5rem;
-  display: flex;
-  flex-direction: row;
-}
-.tarif {
-  font-size: 1.2rem;
-  font-weight: 700;
+h5 {
+  font-size: 1.15rem;
+  padding: 0.8rem 0 0 0.5rem;
   margin: 0;
-  padding: 2.2rem 0.5rem 0 0;
-  position: absolute;
-  right: 5.5rem;
-}
-.plat-selection i {
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  right: 1.5rem;
-  bottom: -3.5rem;
-}
-.coche {
-  background-color: var(--tertiaire);
-  border-radius: 0 1rem 1rem 0;
-  padding: 2.5rem;
-  position: absolute;
-  right: 0;
-}
-.plat-description {
-  width: 85%;
-  height: 5rem;
-  -webkit-animation: shrink 3s ease 1s forwards;
-  animation: shrink 3s ease 1s forwards;
+  overflow: hidden;
+  word-wrap: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat-description p {
   font-size: 0.9rem;
-  margin-top: 0;
+  font-weight: 380;
+  padding: 0 0 0 0.5rem;
+  margin: 0;
   text-align: left;
   overflow: hidden;
+  word-wrap: break-word;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
 }
-h5 {
-  font-size: 1.1rem;
-  padding: 1rem 0 0rem 1rem;
-  margin: 0rem;
+.plat-description {
+  padding-bottom: 1rem;
 
   overflow: hidden;
+  word-wrap: break-all;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+  transition: all 5s 20s;
+}
+
+.tarif {
+  font-weight: 700;
+  padding-right: 1rem;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  right: 1rem;
+  bottom: 0.5rem;
+  transition: all 2s 200ms;
+}
+.plat-selection {
+  background-color: var(--tertiaire);
+  padding: 1.6rem 1rem;
+  position: absolute;
+  right: -6.5rem;
+  transition: all 2s 200ms;
+}
+.coche {
+  padding: 0;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 1s 1s;
 }
 .plat:hover .plat-selection {
-  -webkit-animation: slide 3s ease forwards;
-  animation: slide 3s ease forwards;
+  transform: translateX(-6.5rem);
 }
-.plat:hover i {
-  transform-origin: 1.25rem 1.95rem;
-  -webkit-animation: rotationcoche 3s forwards;
-  animation: rotationcoche 500ms 1 800ms forwards;
+.plat:hover .tarif {
+  transform: translateX(-4rem);
 }
-@-webkit-keyframes slide {
-  100% {
-    right: 0;
-  }
+.plat:hover .coche {
+  transform: rotate(2turn);
 }
-
-@keyframes slide {
-  100% {
-    right: 0;
-  }
+.plat:hover .plat-description {
+  width: 63%;
 }
-@-webkit-keyframes shrink {
-  from {
-    width: 20rem;
-  }
-  to {
-    width: 14rem;
-  }
-}
-@keyframes shrink {
-  from {
-    width: 20rem;
-  }
-  to {
-    width: 14rem;
-  }
-}
-
-@keyframes rotationcoche {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
+/***************************/
 .fiche-bouton {
   color: white;
   font-size: 1.2rem;
@@ -775,11 +742,11 @@ h5 {
     padding-left: 8rem;
   }
   .bouton,
-  .fiche-bouton{
+  .fiche-bouton {
     font-size: 1.1rem;
   }
   .fiche-bouton {
-   margin-left: 32rem;
+    margin-left: 32rem;
   }
   /*FONCTIONNEMENT*/
   .aide {
@@ -886,14 +853,11 @@ h5 {
 
     height: 5rem;
   }
-   .plat-description p,
-   {
- 
+  .plat-description p {
     white-space: normal;
   }
-  
 }
-}
+
 /*/*ECRANS MOYENS/*/
 @media screen and (min-width: 767px) and (max-width: 1020px) {
   /*spinner*/
