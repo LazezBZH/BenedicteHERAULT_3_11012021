@@ -607,6 +607,7 @@ h4 {
   word-wrap: break-all;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }
 h5 {
   font-size: 1.15rem;
@@ -629,13 +630,13 @@ h5 {
   white-space: nowrap;
 }
 .plat-description {
+  width: 80%;
   padding-bottom: 1rem;
 
   overflow: hidden;
   word-wrap: break-all;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition: all 5s 20s;
 }
 
 .tarif {
@@ -672,7 +673,28 @@ h5 {
   transform: rotate(2turn);
 }
 .plat:hover .plat-description {
-  width: 63%;
+  animation: shrink 2s ease-in-out 100ms forwards;
+  -webkit-animation: shrink 2s ease-in-out 100ms forwards;
+}
+@keyframes shrink {
+  from {
+    width: 75%;
+    height: auto;
+  }
+  to {
+    width: 60%;
+    height: auto;
+  }
+}
+@-webkit-keyframes shrink {
+  from {
+    width: 75%;
+    height: auto;
+  }
+  to {
+    width: 60%;
+    height: auto;
+  }
 }
 /***************************/
 .fiche-bouton {
@@ -746,7 +768,7 @@ h5 {
     font-size: 1.1rem;
   }
   .fiche-bouton {
-    margin-left: 32rem;
+    margin-left: 45rem;
   }
   /*FONCTIONNEMENT*/
   .aide {
@@ -755,9 +777,9 @@ h5 {
     margin: 0;
   }
   .aide h2 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: center;
-    padding: 0;
+    padding: 4rem 0 0 0;
   }
   .liens h2 {
     font-size: 2rem;
@@ -801,8 +823,7 @@ h5 {
   }
   .liens h2 {
     font-size: 3rem;
-    text-align: left;
-    padding-left: 15rem;
+    text-align: center;
   }
   .liens ul {
     width: 99%;
@@ -835,7 +856,7 @@ h5 {
     width: 400px;
     margin: 2rem auto;
     padding-right: 4rem;
-    border: 0.2rem solid rgb(151, 150, 150);
+    border: 0.2rem solid rgb(240, 238, 238);
     border-radius: 0.2rem;
     box-shadow: 5px 5px 5px rgb(184, 183, 183);
   }
@@ -844,6 +865,7 @@ h5 {
   }
   .plat {
     max-width: 400px;
+    height: 6rem;
     margin-right: 3rem;
   }
   .fiche-resto figcaption {
@@ -853,8 +875,24 @@ h5 {
 
     height: 5rem;
   }
-  .plat-description p {
+  .plat-description p,
+  h5 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
     white-space: normal;
+    padding: auto;
+  }
+  .plat:hover .tarif {
+    transform: none;
+  }
+  .plat-selection {
+    padding: 1rem;
+    border-radius: 0 0 0 2rem;
+  }
+  .plat:hover .plat-description {
+    animation: none;
+    -webkit-animation: none;
   }
 }
 
@@ -954,7 +992,7 @@ h5 {
   }
   .fiche-resto {
     margin: auto;
-    border: 0.2rem solid rgb(151, 150, 150);
+    border: 0.2rem solid rgb(240, 238, 238);
     border-radius: 0.2rem;
     box-shadow: 5px 5px 5px rgb(184, 183, 183);
   }
@@ -972,13 +1010,38 @@ h5 {
   }
   .plat {
     width: 500px;
-    height: 8rem;
+    height: 12rem;
   }
   h5 {
     font-size: 2rem;
   }
+  .plat-description {
+    margin: auto;
+  }
   .plat-description p {
+    width: 50%;
+    text-align: center;
     font-size: 1.5rem;
     white-space: normal;
+  }
+  h5 {
+    width: 50%;
+    text-align: center;
+    white-space: normal;
+  }
+  .plat:hover .tarif {
+    transform: none;
+  }
+  .plat-selection i {
+    font-size: 3rem;
+  }
+  .plat-selection {
+    font-size: 5rem;
+    padding: 1.5rem;
+    border-radius: 0 0 0 2rem;
+  }
+  .plat:hover .plat-description {
+    animation: none;
+    -webkit-animation: none;
   }
 }
