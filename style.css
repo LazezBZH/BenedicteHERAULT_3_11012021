@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :root {
   --primaire: rgb(147, 86, 220);
   --secondaire: rgb(255, 121, 218);
@@ -79,6 +86,14 @@ i {
   padding-top: 1rem;
   padding-left: 0.3rem;
 }
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes loader {
   0% {
     opacity: 1;
@@ -91,44 +106,66 @@ i {
   position: absolute;
   left: 52%;
   top: 8rem;
+  -webkit-animation: loader ease-in-out 1s 4;
   animation: loader ease-in-out 1s 4;
   background: #9356dc;
   width: 1.5rem;
   height: 3.5rem;
   border-radius: 1rem;
+  -webkit-transform-origin: 1rem 5.5rem;
+  -ms-transform-origin: 1rem 5.5rem;
   transform-origin: 1rem 5.5rem;
 }
 .loading div:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+  -webkit-animation-delay: -2.2s;
   animation-delay: -2.2s;
   background: #9356dc;
 }
 .loading div:nth-child(2) {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
   transform: rotate(30deg);
+  -webkit-animation-delay: -2s;
   animation-delay: -2s;
   background: #a556dc;
 }
 .loading div:nth-child(3) {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
   transform: rotate(60deg);
+  -webkit-animation-delay: -1.9s;
   animation-delay: -1.9s;
   background: #a556dc;
 }
 .loading div:nth-child(4) {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+  -webkit-animation-delay: -1.5s;
   animation-delay: -1.5s;
   background: #ce56dc;
 }
 .loading div:nth-child(5) {
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
   transform: rotate(120deg);
+  -webkit-animation-delay: -1.3s;
   animation-delay: -1.3s;
   background: #e379dc;
 }
 .loading div:nth-child(6) {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
   transform: rotate(150deg);
+  -webkit-animation-delay: -1.15s;
   animation-delay: -1.15s;
   background: #e379ff;
 }
 .loading div:nth-child(7) {
+  -webkit-animation: loader ease-in-out 3.2s 1;
   animation: loader ease-in-out 3.2s 1;
   color: #6ba194;
   font-size: 1.5rem;
@@ -141,34 +178,58 @@ i {
   margin: 4.1rem 0 0 -0.5rem;
 }
 .loading div:nth-child(8) {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+  -webkit-animation-delay: -1s;
   animation-delay: -1s;
   background: #ff79fc;
 }
 .loading div:nth-child(9) {
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
   transform: rotate(210deg);
+  -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
   background: #ff79da;
 }
 .loading div:nth-child(10) {
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
   transform: rotate(240deg);
+  -webkit-animation-delay: -0.7s;
   animation-delay: -0.7s;
   background: #9356dc;
 }
 .loading div:nth-child(11) {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
+  -webkit-animation-delay: -0.4s;
   animation-delay: -0.4s;
   background: #a556dc;
 }
 .loading div:nth-child(12) {
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
   transform: rotate(300deg);
+  -webkit-animation-delay: -0.25s;
   animation-delay: -0.25s;
   background: #a556dc;
 }
 .loading div:nth-child(13) {
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
   transform: rotate(330deg);
+  -webkit-animation-delay: 0s;
   animation-delay: 0s;
   background: #ce56dc;
+}
+@-webkit-keyframes invisible {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 @keyframes invisible {
   100% {
@@ -177,7 +238,9 @@ i {
   }
 }
 .loading-invisible {
+  -webkit-animation: invisible 500ms linear forwards;
   animation: invisible 500ms linear forwards;
+  -webkit-animation-delay: 2500ms;
   animation-delay: 2500ms;
 }
 /*ACCUEIL*/
@@ -193,9 +256,15 @@ i {
 .recherche {
   background-color: #e7e7e7;
   height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-shadow: inset 0 5px 5px #bebebe;
   box-shadow: inset 0 5px 5px #bebebe;
 }
 
@@ -230,20 +299,46 @@ input {
   padding: 1rem 1.2rem;
   margin: 0.5rem 2rem;
   border: none;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgb(255, 121, 218)),
+    to(rgb(147, 86, 220))
+  );
+  background-image: -o-linear-gradient(
+    top left,
+    rgb(255, 121, 218),
+    rgb(147, 86, 220)
+  );
   background-image: linear-gradient(
     to bottom right,
     rgb(255, 121, 218),
     rgb(147, 86, 220)
   );
   border-radius: 2rem;
+  -webkit-box-shadow: 5px 5px 5px rgb(184, 183, 183);
   box-shadow: 5px 5px 5px rgb(184, 183, 183);
 }
 .bouton:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(255, 121, 218, 0.8)),
+    to(rgba(147, 86, 220, 0.8))
+  );
+  background-image: -o-linear-gradient(
+    top left,
+    rgba(255, 121, 218, 0.8),
+    rgba(147, 86, 220, 0.8)
+  );
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 121, 218, 0.8),
     rgba(147, 86, 220, 0.8)
   );
+  -webkit-box-shadow: 10px 10px 10px rgb(170, 170, 170);
   box-shadow: 10px 10px 10px rgb(170, 170, 170);
   cursor: pointer;
 }
@@ -261,6 +356,7 @@ input {
   padding: 0.5rem;
   background-color: var(--backgroundcolorsec);
   border-radius: 2rem;
+  -webkit-box-shadow: 5px 5px 5px rgb(184, 183, 183);
   box-shadow: 5px 5px 5px rgb(184, 183, 183);
 }
 .aide li:hover {
@@ -284,6 +380,8 @@ input {
 }
 
 .aide-texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .aide i {
@@ -313,7 +411,9 @@ input {
 .liens img {
   width: 100%;
   height: 11rem;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: 0 -4rem;
   object-position: 0 -4rem;
   border-radius: 1.5rem 1.5rem 0 0;
 }
@@ -362,12 +462,16 @@ figcaption i {
 
 figcaption {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: justify;
   align-content: space-between;
   line-height: 0.5rem;
   background-color: white;
   position: relative;
   border-radius: 0 0 1.5rem 1.5rem;
+  -webkit-box-shadow: 5px 5px 5px rgb(184, 183, 183);
   box-shadow: 5px 5px 5px rgb(184, 183, 183);
 }
 
@@ -381,6 +485,57 @@ figcaption i {
 figcaption i:hover {
   -webkit-animation: coeur 500ms infinite 0ms forwards;
   animation: coeur 500ms ease 0ms forwards;
+}
+@-webkit-keyframes coeur {
+  from {
+    -webkit-text-stroke: 2px grey;
+  }
+  .1% {
+    -webkit-background-clip: text;
+    background-color: rgba(255, 121, 218, 0.1);
+
+    -webkit-text-stroke: 1px grey;
+  }
+  .2% {
+    -webkit-background-clip: text;
+    background-color: rgba(255, 121, 218, 0.3);
+
+    -webkit-text-stroke: 0px grey;
+  }
+  .3% {
+    -webkit-background-clip: text;
+    background-color: rgba(255, 121, 218, 0.5);
+
+    -webkit-text-stroke: 0px grey;
+  }
+  50% {
+    -webkit-background-clip: text;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(147, 86, 220)),
+      to(white)
+    );
+    background-image: linear-gradient(to bottom, rgb(147, 86, 220), white);
+    -webkit-text-stroke: 0px grey;
+  }
+  to {
+    -webkit-background-clip: text;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(147, 86, 220)),
+      to(rgb(255, 121, 218))
+    );
+    background-image: linear-gradient(
+      to bottom,
+      rgb(147, 86, 220),
+      rgb(255, 121, 218)
+    );
+    -webkit-text-stroke: 0px grey;
+  }
 }
 @keyframes coeur {
   from {
@@ -406,11 +561,31 @@ figcaption i:hover {
   }
   50% {
     -webkit-background-clip: text;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(147, 86, 220)),
+      to(white)
+    );
+    background-image: -o-linear-gradient(top, rgb(147, 86, 220), white);
     background-image: linear-gradient(to bottom, rgb(147, 86, 220), white);
     -webkit-text-stroke: 0px grey;
   }
   to {
     -webkit-background-clip: text;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(147, 86, 220)),
+      to(rgb(255, 121, 218))
+    );
+    background-image: -o-linear-gradient(
+      top,
+      rgb(147, 86, 220),
+      rgb(255, 121, 218)
+    );
     background-image: linear-gradient(
       to bottom,
       rgb(147, 86, 220),
@@ -477,12 +652,21 @@ h4 {
 .fiche-resto img {
   width: 100%;
 
+  -o-object-fit: cover;
+
   object-fit: cover;
 }
 
 .fiche-titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .fiche-resto figure {
@@ -493,6 +677,7 @@ h4 {
   bottom: 0;
   padding-top: 1rem;
   border-radius: 2rem 2rem 0 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
   background-color: var(--backgroundcolorsec);
 }
@@ -514,45 +699,69 @@ h4 {
 
 .fiche-details__entrees :nth-child(2) {
   opacity: 0;
+  -webkit-animation: apparition 1s 200ms forwards;
   animation: apparition 1s 200ms forwards;
 }
 .fiche-details__entrees :nth-child(3) {
   opacity: 0;
+  -webkit-animation: apparition 1s 400ms forwards;
   animation: apparition 1s 400ms forwards;
 }
 .fiche-details__entrees :nth-child(4) {
   opacity: 0;
+  -webkit-animation: apparition 1s 600ms forwards;
   animation: apparition 1s 600ms forwards;
 }
 .fiche-details__entrees :nth-child(5) {
   opacity: 0;
+  -webkit-animation: apparition 1s 700ms forwards;
   animation: apparition 1s 700ms forwards;
 }
 
 .fiche-details__plats :nth-child(2) {
   opacity: 0;
+  -webkit-animation: apparition 1s 800ms forwards;
   animation: apparition 1s 800ms forwards;
 }
 .fiche-details__plats :nth-child(3) {
   opacity: 0;
+  -webkit-animation: apparition 1s 1000ms forwards;
   animation: apparition 1s 1000ms forwards;
 }
 .fiche-details__plats :nth-child(4) {
   opacity: 0;
+  -webkit-animation: apparition 1s 1200ms forwards;
   animation: apparition 1s 1200ms forwards;
 }
 
 .fiche-details__desserts :nth-child(2) {
   opacity: 0;
+  -webkit-animation: apparition 1s 1400ms forwards;
   animation: apparition 1s 1400ms forwards;
 }
 .fiche-details__desserts :nth-child(3) {
   opacity: 0;
+  -webkit-animation: apparition 1s 1600ms forwards;
   animation: apparition 1s 1600ms forwards;
 }
 .fiche-details__desserts :nth-child(4) {
   opacity: 0;
+  -webkit-animation: apparition 1s 1800ms forwards;
   animation: apparition 1s 1800ms forwards;
+}
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes apparition {
   from {
@@ -575,24 +784,39 @@ h4 {
   margin: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   overflow: hidden;
   word-wrap: break-word;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
   margin: 0.5rem 0;
   background-color: white;
   border-radius: 1rem;
+  -webkit-box-shadow: 2px 4px 10px rgb(173, 173, 173);
   box-shadow: 2px 4px 10px rgb(173, 173, 173);
   overflow: hidden;
   word-wrap: break-word;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
@@ -603,6 +827,7 @@ h5 {
   margin: 0;
   overflow: hidden;
   word-wrap: break-word;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -614,6 +839,7 @@ h5 {
   text-align: left;
   overflow: hidden;
   word-wrap: break-word;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -623,6 +849,7 @@ h5 {
 
   overflow: hidden;
   word-wrap: break-word;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -635,6 +862,8 @@ h5 {
   margin: 0;
   right: 1rem;
   bottom: 0.5rem;
+  -webkit-transition: all 2s 200ms;
+  -o-transition: all 2s 200ms;
   transition: all 2s 200ms;
 }
 .plat-selection {
@@ -642,6 +871,8 @@ h5 {
   padding: 1.6rem 1rem;
   position: absolute;
   right: -6.5rem;
+  -webkit-transition: all 2s 200ms;
+  -o-transition: all 2s 200ms;
   transition: all 2s 200ms;
 }
 .coche {
@@ -649,15 +880,23 @@ h5 {
   line-height: 1.5rem;
   font-size: 1.5rem;
   color: white;
+  -webkit-transition: all 1s 1s;
+  -o-transition: all 1s 1s;
   transition: all 1s 1s;
 }
 .plat:hover .plat-selection {
+  -webkit-transform: translateX(-6.5rem);
+  -ms-transform: translateX(-6.5rem);
   transform: translateX(-6.5rem);
 }
 .plat:hover .tarif {
+  -webkit-transform: translateX(-4rem);
+  -ms-transform: translateX(-4rem);
   transform: translateX(-4rem);
 }
 .plat:hover .coche {
+  -webkit-transform: rotate(2turn);
+  -ms-transform: rotate(2turn);
   transform: rotate(2turn);
 }
 .plat:hover .plat-description {
@@ -691,20 +930,46 @@ h5 {
   padding: 1rem 3rem;
   margin: 0.5rem 2rem;
   border: none;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgb(255, 121, 218)),
+    to(rgb(147, 86, 220))
+  );
+  background-image: -o-linear-gradient(
+    top left,
+    rgb(255, 121, 218),
+    rgb(147, 86, 220)
+  );
   background-image: linear-gradient(
     to bottom right,
     rgb(255, 121, 218),
     rgb(147, 86, 220)
   );
   border-radius: 2rem;
+  -webkit-box-shadow: 5px 5px 5px rgb(184, 183, 183);
   box-shadow: 5px 5px 5px rgb(184, 183, 183);
 }
 .fiche-bouton:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(255, 121, 218, 0.8)),
+    to(rgba(147, 86, 220, 0.8))
+  );
+  background-image: -o-linear-gradient(
+    top left,
+    rgba(255, 121, 218, 0.8),
+    rgba(147, 86, 220, 0.8)
+  );
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 121, 218, 0.8),
     rgba(147, 86, 220, 0.8)
   );
+  -webkit-box-shadow: 10px 10px 10px rgb(170, 170, 170);
   box-shadow: 10px 10px 10px rgb(170, 170, 170);
   cursor: pointer;
 }
@@ -716,14 +981,18 @@ h5 {
     position: absolute;
     left: 50%;
     top: 12rem;
+    -webkit-animation: loader ease-in-out 1s 4;
     animation: loader ease-in-out 1s 4;
     background: #9356dc;
     width: 1.5rem;
     height: 3.5rem;
     border-radius: 1rem;
+    -webkit-transform-origin: 1rem 5.5rem;
+    -ms-transform-origin: 1rem 5.5rem;
     transform-origin: 1rem 5.5rem;
   }
   .loading div:nth-child(7) {
+    -webkit-animation: loader ease-in-out 3.2s 1;
     animation: loader ease-in-out 3.2s 1;
     color: #6ba194;
     font-size: 1.5rem;
@@ -816,27 +1085,47 @@ h5 {
   }
   .liens ul {
     width: 99%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .liens li {
     width: 45%;
   }
   .liens figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
   /*REGROUPER RESTO ET FONCTIONNEMENT*/
   .principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   /*fiches restaurants ordi*/
   .fiche-resto_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 1rem auto;
     max-width: 1000px;
@@ -847,6 +1136,7 @@ h5 {
     padding-right: 4rem;
     border: 0.2rem solid rgb(240, 238, 238);
     border-radius: 0.2rem;
+    -webkit-box-shadow: 5px 5px 5px rgb(184, 183, 183);
     box-shadow: 5px 5px 5px rgb(184, 183, 183);
   }
   .fiche-resto img {
@@ -872,6 +1162,8 @@ h5 {
     white-space: normal;
   }
   .plat:hover .tarif {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .plat-selection {
@@ -891,14 +1183,18 @@ h5 {
     position: absolute;
     left: 50%;
     top: 12rem;
+    -webkit-animation: loader ease-in-out 1s 4;
     animation: loader ease-in-out 1s 4;
     background: #9356dc;
     width: 1.5rem;
     height: 3.5rem;
     border-radius: 1rem;
+    -webkit-transform-origin: 1rem 5.5rem;
+    -ms-transform-origin: 1rem 5.5rem;
     transform-origin: 1rem 5.5rem;
   }
   .loading div:nth-child(7) {
+    -webkit-animation: loader ease-in-out 3.2s 1;
     animation: loader ease-in-out 3.2s 1;
     color: #6ba194;
     font-size: 1.5rem;
@@ -939,7 +1235,12 @@ h5 {
     text-align: center;
   }
   .aide ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 
@@ -956,16 +1257,28 @@ h5 {
     text-align: center;
   }
   .liens ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .liens li {
     width: 45%;
   }
   .liens figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .caption i {
@@ -982,6 +1295,7 @@ h5 {
     margin: auto;
     border: 0.2rem solid rgb(240, 238, 238);
     border-radius: 0.2rem;
+    -webkit-box-shadow: 5px 5px 5px rgb(184, 183, 183);
     box-shadow: 5px 5px 5px rgb(184, 183, 183);
   }
   .fiche-resto figcaption {
@@ -1017,6 +1331,8 @@ h5 {
     white-space: normal;
   }
   .plat:hover .tarif {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .plat-selection i {
